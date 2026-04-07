@@ -1,10 +1,10 @@
 const services = [
-  { icon: '🔍', title: 'Penetration Testing', desc: 'Simulating real-world attacks to identify security weaknesses before malicious actors do.', tags: ['Web', 'Network', 'API'] },
-  { icon: '🛡️', title: 'Vulnerability Assessment', desc: 'Systematic review of security weaknesses in information systems and network infrastructure.', tags: ['OWASP', 'CVE', 'CVSS'] },
-  { icon: '🌐', title: 'Network Security', desc: 'Analyzing network traffic, firewall configurations, and identifying potential intrusion vectors.', tags: ['Wireshark', 'Nmap', 'IDS'] },
-  { icon: '🏴‍☠️', title: 'CTF Competitions', desc: 'Competing in Capture The Flag challenges to sharpen offensive and defensive security skills.', tags: ['Web', 'Crypto', 'Forensics'] },
-  { icon: '🔐', title: 'Security Auditing', desc: 'Reviewing systems, policies and procedures to ensure security compliance and best practices.', tags: ['Compliance', 'Policy', 'Review'] },
-  { icon: '⚡', title: 'Incident Response', desc: 'Rapid identification, containment and recovery from security incidents and breaches.', tags: ['Forensics', 'Analysis', 'Recovery'] },
+  { icon: '💻', title: 'Web Development', desc: 'Building responsive, modern, and high-performance websites and web applications using cutting-edge technologies.', tags: ['React', 'Full-Stack', 'Frontend'] },
+  { icon: '📱', title: 'App Development', desc: 'Creating intuitive and engaging mobile applications designed to provide seamless user experiences across devices.', tags: ['Android', 'iOS', 'Mobile'] },
+  { icon: '⚙️', title: 'Software Development', desc: 'Developing custom software solutions tailored to solve specific business problems and automate processes.', tags: ['Custom', 'Scalable', 'Logic'] },
+  { icon: '🎨', title: 'UI/UX Design', desc: 'Designing user-centric interfaces with a strong focus on aesthetics, accessibility, and smooth user journeys.', tags: ['Figma', 'Prototyping', 'Design'] },
+  { icon: '🖌️', title: 'Graphic Design', desc: 'Crafting visually stunning graphics, logos, and digital branding assets to elevate online presence.', tags: ['Branding', 'Visuals', 'Creative'] },
+  { icon: '✍️', title: 'Article Writing', desc: 'Writing technical articles, documentation, and engaging content related to technology and cybersecurity.', tags: ['Tech Blog', 'Docs', 'Content'] },
 ];
 
 export default function Services() {

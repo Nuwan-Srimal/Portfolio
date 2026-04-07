@@ -1,13 +1,12 @@
 const skills = [
-  { name: 'Network Security', level: 80 },
-  { name: 'Penetration Testing', level: 70 },
-  { name: 'Linux / Kali Linux', level: 85 },
-  { name: 'CTF Competitions', level: 75 },
-  { name: 'Python Scripting', level: 65 },
-  { name: 'Vulnerability Assessment', level: 72 },
+  { name: 'HTML / CSS', level: 90 },
+  { name: 'React.js', level: 75 },
+  { name: 'UI/UX Design', level: 85 },
+  { name: 'Full-Stack Dev', level: 70 },
+  { name: 'TryHackMe Practice', level: 65 },
 ];
 
-const tools = ['Nmap', 'Wireshark', 'Metasploit', 'Burp Suite', 'Hydra', 'John the Ripper', 'Gobuster', 'SQLMap'];
+const tools = ['VS Code', 'Figma', 'Burp Suite', 'Nmap', 'Git', 'Postman', 'Wireshark'];
 
 export default function About() {
   return (
@@ -21,25 +20,25 @@ export default function About() {
             <div className="about-avatar">
               <div className="avatar-ring" />
               <div className="avatar-inner">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" width="60" height="60" opacity="0.4">
-                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z"/>
-                </svg>
-              </div>
-              <div className="avatar-status">
-                <span className="status-dot" />
-                <span className="status-text">Available for work</span>
+                <img src="https://avatars.githubusercontent.com/u/112359694?v=4" alt="Nuwan Srimal Avatar" className="avatar-img" />
               </div>
             </div>
             <div className="about-info">
               <div className="info-row"><span className="info-label">Name</span><span>Nuwan Srimal</span></div>
               <div className="info-row"><span className="info-label">Role</span><span>Cyber Security Student</span></div>
-              <div className="info-row"><span className="info-label">Focus</span><span>Ethical Hacking, CTF</span></div>
+              <div className="info-row"><span className="info-label">Focus</span><span>Full-Stack, UI/UX, Bug Bounty</span></div>
               <div className="info-row"><span className="info-label">Status</span><span className="status-open">Open to opportunities</span></div>
             </div>
           </div>
           <p className="about-bio">
-            My journey in cybersecurity has equipped me with a strong foundation in identifying vulnerabilities, implementing security measures, and staying updated on the latest threats. I love breaking things (ethically) to understand how to better defend them.
+            I am a Cyber Security Student continuously exploring the digital world. I am highly focused on Full-Stack Development and UI/UX Design, while also actively practicing my cybersecurity skills through TryHackMe and HackTheBox. I am very interested in Bug Bounty hunting and currently working towards building real-world software solutions and secure environments.
           </p>
+          <div className="vision-block">
+            <h3 className="vision-title">My Vision</h3>
+            <p className="vision-text">
+              "To bridge the gap between elegant user interfaces and robust backend security. By integrating Full-Stack Development with Bug Bounty insights, I aim to craft digital experiences that are visually capturing and uncompromisingly secure."
+            </p>
+          </div>
           <div className="tools-section">
             <p className="tools-label">// tools_i_use</p>
             <div className="tools-grid">

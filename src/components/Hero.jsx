@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
-const roles = ['Cyber Security Student', 'CTF Player', 'Ethical Hacker', 'Network Analyst'];
+const roles = ['Cyber Security Student', 'Bug Bounty Enthusiast', 'UI/UX Designer', 'Full-Stack Developer'];
 
 export default function Hero() {
   const [roleIdx, setRoleIdx] = useState(0);
@@ -25,7 +26,8 @@ export default function Hero() {
   }, [charIdx, deleting, roleIdx]);
 
   return (
-    <section id="home" className="hero">
+    <div className="home-page">
+      <section id="home" className="hero">
       <div className="hero-bg">
         <div className="hero-grid" />
         <div className="hero-glow" />
@@ -49,13 +51,13 @@ export default function Hero() {
         </p>
 
         <div className="hero-btns">
-          <a href="#projects" className="btn-primary" onClick={e => { e.preventDefault(); document.getElementById('projects')?.scrollIntoView({behavior:'smooth'}); }}>
+          <Link to="/projects" className="btn-primary">
             <span>View Projects</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-          <a href="#contact" className="btn-outline" onClick={e => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({behavior:'smooth'}); }}>
+          </Link>
+          <Link to="/contact" className="btn-outline">
             Get In Touch
-          </a>
+          </Link>
         </div>
 
         <div className="hero-socials">
@@ -90,5 +92,58 @@ export default function Hero() {
         </div>
       </div>
     </section>
+
+      {/* NEW STATS SECTION */}
+      <section className="home-stats-wrapper">
+        <div className="stats-row">
+          <div className="stat-item">
+            <h2>5+</h2>
+            <p>REAL PROJECTS</p>
+          </div>
+          <div className="stat-item">
+            <h2>100%</h2>
+            <p>CUSTOM CRAFTED</p>
+          </div>
+          <div className="stat-item">
+            <h2>CTF</h2>
+            <p>CONSTANT LEARNING</p>
+          </div>
+          <div className="stat-item">
+            <h2>24/7</h2>
+            <p>DEDICATED</p>
+          </div>
+        </div>
+      </section>
+
+      {/* NEW FEATURES SECTION */}
+      <section className="home-features-wrapper">
+        <div className="features-inner">
+          <div className="features-left">
+            <h2>Built for businesses that need <span>modern web experiences.</span></h2>
+            <ul className="feature-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 6L9 17l-5-5"/></svg> Full-stack web and cloud platforms</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 6L9 17l-5-5"/></svg> UI/UX driven design systems</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 6L9 17l-5-5"/></svg> Secure coding practices</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 6L9 17l-5-5"/></svg> Cross-device mobile responsiveness</li>
+            </ul>
+            <Link to="/about" className="btn-outline feature-btn">Learn More About Me</Link>
+          </div>
+          <div className="features-right">
+            <div className="testimonial-card">
+              <div className="test-header">
+                <div className="test-avatar">CT</div>
+                <div>
+                  <h4>Caleb Trevino</h4>
+                  <p>CISO, GlobalTech Data</p>
+                </div>
+              </div>
+              <p className="test-quote">
+                "Developing seamless applications isn't just about code; it's a complete paradigm shift for the user experience. We deploy faster and build better."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

@@ -1,11 +1,18 @@
 import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
-const links = ['Home', 'About', 'Services', 'Projects', 'Contact'];
+const links = [
+  { name: 'Home', path: '/' },
+  { name: 'About', path: '/about' },
+  { name: 'Services', path: '/services' },
+  { name: 'Projects', path: '/projects' },
+  { name: 'Contact', path: '/contact' }
+];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const [active, setActive] = useState('Home');
+  const location = useLocation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -13,26 +20,25 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const scrollTo = (id) => {
-    document.getElementById(id.toLowerCase())?.scrollIntoView({ behavior: 'smooth' });
-    setActive(id);
-    setOpen(false);
-  };
-
   return (
     <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-      <div className="nav-logo" onClick={() => scrollTo('Home')}>
+      <Link to="/" className="nav-logo" onClick={() => setOpen(false)}>
         <span className="logo-bracket">[</span>
         NS
         <span className="logo-bracket">]</span>
-      </div>
+      </Link>
 
       <nav className={`nav-links ${open ? 'open' : ''}`}>
-        {links.map(l => (
-          <button key={l} className={`nav-link ${active === l ? 'active' : ''}`} onClick={() => scrollTo(l)}>
-            <span className="nav-num">{String(links.indexOf(l)).padStart(2,'0')}.</span>
-            {l}
-          </button>
+        {links.map((l, index) => (
+          <Link 
+            key={l.name} 
+            to={l.path}
+            className={`nav-link ${location.pathname === l.path ? 'active' : ''}`} 
+            onClick={() => setOpen(false)}
+          >
+            <span className="nav-num">{String(index).padStart(2,'0')}.</span>
+            {l.name}
+          </Link>
         ))}
       </nav>
 

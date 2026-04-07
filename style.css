@@ -348,7 +348,7 @@ section { position: relative; z-index: 1; min-height: 100vh; padding: 100px 5% 6
   letter-spacing: -0.03em;
   margin-bottom: 1rem;
 }
-.hero-name span {color: transparent; -webkit-text-stroke: 2px var(--cyan-primary); text-shadow: none;}
+.hero-name span {color: var(--cyan-primary); -webkit-text-stroke: 0; text-shadow: var(--shadow-glow);}
 
 .hero-role {
   font-family: var(--font-mono);
@@ -768,18 +768,6 @@ section { position: relative; z-index: 1; min-height: 100vh; padding: 100px 5% 6
 
 @media (max-width: 900px) { .contact-inner { grid-template-columns: 1fr; } }
 
-.footer {
-  text-align: center;
-  margin-top: 8rem;
-  padding-top: 3rem;
-  border-top: 1px solid var(--border-glass);
-}
-.footer-text {
-  font-family: var(--font-mono);
-  font-size: 0.9rem;
-  color: var(--text-muted);
-}
-
 /* ==============================================================
    10. ANIMATIONS
 ============================================================== */
@@ -794,4 +782,211 @@ section { position: relative; z-index: 1; min-height: 100vh; padding: 100px 5% 6
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
+}
+
+/* ==============================================================
+   11. NEW SECTIONS (STATS, FEATURES, FOOTER, ABOUT)
+============================================================== */
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.vision-block {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(0, 229, 255, 0.03);
+  border-left: 3px solid var(--cyan-primary);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+.vision-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+.vision-text {
+  font-style: italic;
+  color: var(--text-dim);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Stats */
+.home-stats-wrapper {
+  padding: 4rem 5%;
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-glass);
+  border-bottom: 1px solid var(--border-glass);
+}
+.stats-row {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  text-align: center;
+}
+.stat-item h2 {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--cyan-primary);
+  margin-bottom: 0.5rem;
+}
+.stat-item p {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+}
+
+/* Features */
+.home-features-wrapper {
+  padding: 6rem 5%;
+}
+.features-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.features-left { flex: 1; }
+.features-left h2 {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+.features-left h2 span { color: var(--cyan-primary); }
+.feature-list {
+  list-style: none;
+  margin-bottom: 2.5rem;
+}
+.feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: var(--text-dim);
+}
+.feature-list li svg { flex-shrink: 0; width: 24px; height: 24px; }
+.feature-btn { display: inline-flex; }
+
+.features-right { flex: 1; }
+.testimonial-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-glow);
+}
+.test-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.test-avatar {
+  width: 50px; height: 50px;
+  background: rgba(0, 229, 255, 0.1);
+  border: 1px solid var(--cyan-primary);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; color: var(--cyan-primary);
+}
+.test-header h4 { font-family: var(--font-display); color: #fff; margin-bottom: 0.2rem; }
+.test-header p { font-size: 0.85rem; color: var(--text-muted); }
+.test-quote { font-style: italic; color: var(--text-dim); font-size: 1.1rem; line-height: 1.6; }
+
+/* Elaborate Footer */
+.footer-elaborate {
+  margin-top: 4rem;
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-glass);
+  padding: 4rem 5% 2rem;
+}
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+.footer-col h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+.footer-logo {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.footer-brand-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.footer-col.links a, .footer-col.social a {
+  display: block;
+  color: var(--text-dim);
+  text-decoration: none;
+  margin-bottom: 0.8rem;
+  transition: var(--transition);
+}
+.footer-col.links a:hover, .footer-col.social a:hover { color: var(--cyan-primary); }
+.footer-col.focus p {
+  color: var(--text-dim);
+  margin-bottom: 0.8rem;
+}
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-glass);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* ==============================================================
+   12. RESPONSIVE QUERIES
+============================================================== */
+@media (max-width: 1024px) {
+  .hero-name { font-size: 5rem; }
+  .features-inner { flex-direction: column; }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .hero-inner { flex-direction: column; text-align: center; gap: 4rem; }
+  .hero-name { font-size: 4rem; }
+  .hero-btns { justify-content: center; }
+  .hero-socials { justify-content: center; }
+  .terminal-body { font-size: 0.75rem; }
+  
+  .stats-row { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .features-left h2 { font-size: 2rem; }
+  
+  .footer-inner { grid-template-columns: 1fr; text-align: center; }
+  .footer-col.links a, .footer-col.social a { display: inline-block; margin: 0 0.5rem 0.5rem; }
+  
+  /* Navbar adjust */
+  .nav-links { display: flex; flex-direction: column; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--bg-main); padding-top: 6rem; align-items: center; transform: translateX(100%); transition: var(--transition); z-index: -1; }
+  .nav-links.open { transform: translateX(0); }
+}
+
+@media (max-width: 480px) {
+  .hero-name { font-size: 3rem; }
+  .stats-row { grid-template-columns: 1fr; }
+  .feature-list li { font-size: 1rem; }
+  .section-title { font-size: 2.5rem; }
+  .service-card { padding: 1.5rem; }
 }

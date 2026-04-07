@@ -78,13 +78,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-
-      <div className="footer">
-        <p className="footer-text">
-          <span className="mono-tag" style={{ fontSize: '0.7rem' }}>// </span>
-          Built with React + Vite · Nuwan Srimal © 2025
-        </p>
-      </div>
     </section>
   );
 }
