@@ -119,7 +119,7 @@ export default function Hero() {
             <p>CUSTOM CRAFTED</p>
           </div>
           <div className="stat-item">
-            <h2>CTF</h2>
+            <h2>Web Development</h2>
             <p>CONSTANT LEARNING</p>
           </div>
           <div className="stat-item">
