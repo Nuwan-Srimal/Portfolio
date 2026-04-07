@@ -19,9 +19,9 @@ const projects = [
     title: 'Itech Computers POS',
     desc: 'Point-of-Sale system built for a real computer shop. Handles inventory, sales transactions, billing, and reporting. Private deployment on Vercel.',
     tags: ['POS', 'React', 'Vercel'],
-    live: 'https://itech-computers-shop-pos.vercel.app/',
+    live: null,
     github: null,
-    status: 'Live',
+    status: 'Private',
   },
   {
     title: 'OneClick Assist',
@@ -50,14 +50,15 @@ const projects = [
 ];
 
 const statusColor = {
-  'Live': '#00ff88',
+  'Live':        '#00ff88',
   'In Progress': '#febc2e',
-  'Published': '#00d4ff',
+  'Published':   '#00d4ff',
+  'Private':     '#8892b0',
 };
 
 export default function Projects() {
   return (
-    <section id="projects" className="projects">
+    <section id="projects" className="projects" style={{ padding: '240px 10% 200px' }}>
       <div className="projects-inner">
         <div className="projects-header">
           <p className="section-tag">// my_work</p>
