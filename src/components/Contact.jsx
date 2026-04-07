@@ -70,7 +70,7 @@ export default function Contact() {
                   <label>Message</label>
                   <textarea name="message" value={form.message} onChange={handle} placeholder="What's on your mind?" rows={5} required />
                 </div>
-                <button type="submit" className="btn-primary" style={{ width: '100%', justifyContent: 'center', fontFamily: 'var(--body)' }}>
+                <button type="submit" className="btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
                   Send Message
                 </button>
               </form>

@@ -6,62 +6,153 @@ const skills = [
   { name: 'TryHackMe Practice', level: 65 },
 ];
 
-const tools = ['VS Code', 'Figma', 'Burp Suite', 'Nmap', 'Git', 'Postman', 'Wireshark'];
+const arsenal = [
+  { icon: '🖥️', name: 'Kali Linux' },
+  { icon: '⚡', name: 'React.js' },
+  { icon: '🔐', name: 'Burp Suite' },
+  { icon: '🌐', name: 'Node.js' },
+  { icon: '🗄️', name: 'Nmap' },
+  { icon: '🎨', name: 'Figma' },
+  { icon: '📡', name: 'Wireshark' },
+  { icon: '🛠️', name: 'VS Code' },
+];
 
 export default function About() {
   return (
-    <section id="about" className="about">
-      <div className="about-inner">
-        <div className="about-left">
-          <p className="section-tag">// about_me</p>
-          <h2 className="section-title">Who Am <span>I</span></h2>
-          <div className="glow-line" />
-          <div className="about-card">
-            <div className="about-avatar">
-              <div className="avatar-ring" />
-              <div className="avatar-inner">
-                <img src="https://avatars.githubusercontent.com/u/112359694?v=4" alt="Nuwan Srimal Avatar" className="avatar-img" />
+    <section id="about" className="about-page">
+      <div className="about-page-inner">
+
+        {/* ── HERO IDENTITY GRID ── */}
+        <div className="ab-identity-grid">
+
+          {/* Image Column */}
+          <div className="ab-img-col">
+            <div className="ab-img-frame">
+              <img
+                src="https://avatars.githubusercontent.com/u/112359694?v=4"
+                alt="Nuwan Srimal"
+                className="ab-portrait"
+              />
+              <div className="ab-img-overlay" />
+            </div>
+            <div className="ab-status-card">
+              <p className="ab-status-label">System Status</p>
+              <p className="ab-status-val">
+                <span className="ab-pulse" />
+                OPERATIONAL // VERIFIED
+              </p>
+            </div>
+          </div>
+
+          {/* Text Column */}
+          <div className="ab-text-col">
+            <p className="ab-eyebrow">Neural Architecture / Lead Developer</p>
+            <h1 className="ab-hero-name">
+              NUWAN<br />
+              <span className="ab-name-accent">SRIMAL</span>
+            </h1>
+            <div className="ab-bio-blocks">
+              <p>
+                Specializing in cybersecurity infrastructure and sophisticated full-stack architectures.
+                My journey began at the intersection of curiosity and caution—exploring web vulnerabilities
+                to build its strongest defenses.
+              </p>
+              <p>
+                I bridge the gap between aesthetic excellence and impenetrable logic. From engineering
+                secure APIs to designing immersive UI systems—my objective is to redefine digital safety
+                through technical precision and creativity.
+              </p>
+            </div>
+            <div className="ab-meta-grid">
+              <div className="ab-meta-item">
+                <span className="ab-meta-lbl">Name</span>
+                <span className="ab-meta-val">Nuwan Srimal Samaranayaka</span>
               </div>
-            </div>
-            <div className="about-info">
-              <div className="info-row"><span className="info-label">Name</span><span>Nuwan Srimal</span></div>
-              <div className="info-row"><span className="info-label">Role</span><span>Cyber Security Student</span></div>
-              <div className="info-row"><span className="info-label">Focus</span><span>Full-Stack, UI/UX, Bug Bounty</span></div>
-              <div className="info-row"><span className="info-label">Status</span><span className="status-open">Open to opportunities</span></div>
-            </div>
-          </div>
-          <p className="about-bio">
-            I am a Cyber Security Student continuously exploring the digital world. I am highly focused on Full-Stack Development and UI/UX Design, while also actively practicing my cybersecurity skills through TryHackMe and HackTheBox. I am very interested in Bug Bounty hunting and currently working towards building real-world software solutions and secure environments.
-          </p>
-          <div className="vision-block">
-            <h3 className="vision-title">My Vision</h3>
-            <p className="vision-text">
-              "To bridge the gap between elegant user interfaces and robust backend security. By integrating Full-Stack Development with Bug Bounty insights, I aim to craft digital experiences that are visually capturing and uncompromisingly secure."
-            </p>
-          </div>
-          <div className="tools-section">
-            <p className="tools-label">// tools_i_use</p>
-            <div className="tools-grid">
-              {tools.map(t => <span key={t} className="tool-badge">{t}</span>)}
+              <div className="ab-meta-item">
+                <span className="ab-meta-lbl">Role</span>
+                <span className="ab-meta-val">Cyber Security Student</span>
+              </div>
+              <div className="ab-meta-item">
+                <span className="ab-meta-lbl">Focus</span>
+                <span className="ab-meta-val">Full-Stack · UI/UX · Bug Bounty</span>
+              </div>
+              <div className="ab-meta-item">
+                <span className="ab-meta-lbl">Status</span>
+                <span className="ab-meta-val ab-avail">Open to opportunities</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="about-right">
-          <p className="skills-label">// skill_levels</p>
-          <div className="skills-list">
-            {skills.map(s => (
-              <div key={s.name} className="skill-item">
-                <div className="skill-header">
-                  <span className="skill-name">{s.name}</span>
-                  <span className="skill-pct">{s.level}%</span>
-                </div>
-                <div className="skill-bar">
-                  <div className="skill-fill" style={{ width: `${s.level}%` }} />
-                </div>
-              </div>
-            ))}
+        {/* ── VISION QUOTE BLOCK ── */}
+        <div className="ab-vision-block">
+          <span className="ab-vision-deco">🔒</span>
+          <blockquote className="ab-vision-quote">
+            "To bridge the gap between elegant user interfaces and robust backend security.
+            Security is not a feature — it is the foundation of digital trust."
+          </blockquote>
+          <div className="ab-vision-meta">
+            <span>VISION_STATEMENT_001</span>
+            <span className="ab-vision-line" />
+            <span>SENTINEL PROTOCOL</span>
           </div>
+        </div>
+
+        {/* ── BENTO GRID: SKILLS + ARSENAL ── */}
+        <div className="ab-bento-grid">
+
+          {/* Skills */}
+          <div className="ab-bento-skills">
+            <div className="ab-bento-header">
+              <div>
+                <h3 className="ab-bento-title">CORE_COMPETENCIES</h3>
+                <p className="ab-bento-sub">Quantified Tactical Skillset</p>
+              </div>
+              <span className="ab-bento-icon">◈</span>
+            </div>
+            <div className="ab-skills-list">
+              {skills.map(s => (
+                <div key={s.name} className="ab-skill-item">
+                  <div className="ab-skill-header">
+                    <span className="ab-skill-name">{s.name}</span>
+                    <span className="ab-skill-pct">{s.level}%</span>
+                  </div>
+                  <div className="ab-skill-track">
+                    <div className="ab-skill-fill ab-skill-shine" style={{ width: `${s.level}%` }} />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Arsenal */}
+          <div className="ab-bento-arsenal">
+            <div className="ab-bento-header">
+              <div>
+                <h3 className="ab-bento-title">ARSENAL</h3>
+                <p className="ab-bento-sub">Deployment Stack</p>
+              </div>
+            </div>
+            <div className="ab-arsenal-grid">
+              {arsenal.map(t => (
+                <div key={t.name} className="ab-tool-card">
+                  <span className="ab-tool-icon">{t.icon}</span>
+                  <span className="ab-tool-name">{t.name}</span>
+                </div>
+              ))}
+            </div>
+            <div className="ab-arsenal-footer">
+              <a
+                href="https://github.com/Nuwan-Srimal"
+                target="_blank"
+                rel="noreferrer"
+                className="ab-dl-btn"
+              >
+                VIEW GITHUB PROFILE
+              </a>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
